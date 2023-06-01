@@ -14,7 +14,8 @@ To build an API for a social network web application where users can share their
   ![image](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
 
-Video-Demonstration: Screencastify.webm
+Video-Demonstration: [Screencastify.webm](https://github.com/reshmalijo777/Social-Network-API/assets/128992593/f10fba54-e79d-4d51-888b-c012098c5c77)
+
 Reference: [Link](https://stackoverflow.com/questions/5024787/update-model-with-mongoose-express-nodejs) also got external help in making the controllers work.
 
 ## User Story
