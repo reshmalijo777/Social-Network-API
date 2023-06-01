@@ -10,12 +10,10 @@ module.exports = {
   //Get single user
   getSingleUser(req, res) {
     User.findOne({ _id: req.params.userId })
-      .populate("thoughts")
-      .populate("friends")
-      .select("-__v")
-      .then((user) =>
+           .select("-__v")
+           .then((user) =>
         !user
-          ? res.status(404).json({ message: "No User find with that ID!" })
+          ? res.status(404).json({ message: "No Thought find with this ID!" })
           : res.json(user)
       )
       .catch((err) => res.status(500).json(err));
@@ -55,18 +53,4 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
  
-  //delete a friend
-  deleteFriend(req, res) {
-    User.findOneAndUpdate(
-      { _id: req.params.userId },
-      { $pull: { friends: req.params.friendId } },
-      { new: true }
-    )
-      .then((user) =>
-          !user
-            ? res.status(404).json({ message: "No User find with this ID!" })
-            : res.json(user)
-      )
-      .catch((err) => res.status(500).json(err));
-  },
-};
+ };
